@@ -1,0 +1,28 @@
+.MovieList {
+    margin: auto;
+    width: 98%;
+}
+
+.MovieList ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.MovieList li {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-height: 200px;
+    padding: .5rem;
+}
+
+.MovieList li img {
+    height: 100%;
+}
+
+.MovieList li div:last-child {
+    margin-left: 1rem;
+}
+
+

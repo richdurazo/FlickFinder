@@ -1,0 +1,28 @@
+.MovieContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-height: 400px;
+}
+
+.MovieImageContainer {
+    width: 125px;
+}
+
+.ReviewRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem 0;
+}
+
+.MovieTitle {
+    font-weight: bold;
+    margin: .5rem 0;
+}
+
+.MovieDate {
+    margin: .25rem 0;
+    font-style: italic;
+    color: rgba(0,0,0,.56);
+}
