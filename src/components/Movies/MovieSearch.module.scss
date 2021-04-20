@@ -1,7 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 .MovieSearchContainer {
     display: flex;
     flex-direction: column;
     width: 100%;
     justify-content: center;
     align-items: center;
+}
+
+.SearchInputContainer {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;  
+    font-size: 64px;
+    color: #F2D2BD;
+    margin: 1rem;
 }
