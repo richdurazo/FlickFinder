@@ -1,7 +1,6 @@
-
 import Movies from './components/Movies/Movies';
 
-const App = props => {
+const App = () => {
   return <Movies />
 }
 

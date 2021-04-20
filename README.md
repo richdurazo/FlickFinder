@@ -35,6 +35,7 @@ The main challenges were just having the time to implement all the features. Cur
 ## Future Improvements:
 - Upgraded UI / styling
     - placeholder for empty images
-    - loader
-- add initial list (maybe top searched one of the other api endpoints)
+    - edge case style fix
 - a different view with selecting a particular movie and the ability to vote
+- leverage more material ui components
+

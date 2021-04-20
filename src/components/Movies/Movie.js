@@ -6,12 +6,17 @@ const Movie = props => {
     const { movie } = props;
     const [shortDescription, setShortDescription] = useState('');
     const [movieDate, setMovieDate] = useState('');
+    const [rating, setRating] = useState(0);
 
     useEffect(() => {
-        let shortOverview = movie.overview.substring(0, 100) + '...';
-        setShortDescription(shortOverview);
-        let date = movie.date.split('-')[0];
-        setMovieDate(date);
+        if (movie) {
+            let shortOverview = movie.overview.length > 200 ? movie.overview.substring(0, 200) + '...' : movie.overview;
+            setShortDescription(shortOverview);
+            let date = movie.date.split('-')[0];
+            setMovieDate(date);
+            let rating = (movie.voteAverage / 10) * 5;
+            setRating(rating)
+        }
     }, [movie])
     
     return (
@@ -26,8 +31,8 @@ const Movie = props => {
                 <div className={classes.MovieDate}>{movieDate}</div>
                 <div className={classes.Overview}>{shortDescription}</div>
                 <div className={classes.ReviewRow}>
-                    <Rating name="read-only" value={movie.voteAverage} readOnly />
-                    <div>{movie.voteCount}</div>
+                    <Rating value={rating} readOnly size="small" />
+                    <div className={classes.Reviews}>{movie.voteCount} reviews</div>
                 </div>
             </div>
         </li>
